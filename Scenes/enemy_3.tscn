@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Scripts/waypoint_movement.gd" type="Script" id=1]
+[ext_resource path="res://chicken.png" type="Texture" id=2]
+
+
+[node name="enemy_3" type="KinematicBody2D"]
+
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/scale = Vector2( 1.97305, 1.61509 )
+texture = ExtResource( 2 )
+
+

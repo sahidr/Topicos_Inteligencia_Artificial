@@ -1,0 +1,139 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Enemy.xml" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Cow0.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/food.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ray.png" type="Texture" id=5]
+[ext_resource path="res://enemy1.png" type="Texture" id=6]
+
+[node name="Control" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 3.0
+margin/right = 1026.0
+margin/bottom = 589.0
+
+[node name="Play" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 517.0
+margin/top = 511.0
+margin/right = 594.0
+margin/bottom = 563.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Play"
+flat = false
+script/script = ExtResource( 1 )
+
+[node name="title" type="Label" parent="."]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 451.0
+margin/top = 29.0
+margin/right = 551.0
+margin/bottom = 43.0
+custom_colors/font_color = Color( 0.81134, 0.984375, 0.830266, 1 )
+text = "Abduction"
+align = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Enemy" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 283.253, 368.062 )
+
+[node name="Cow0" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 278.731, 270.748 )
+
+[node name="food" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 281.402, 467.024 )
+
+[node name="Objetivo" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 362.0
+margin/top = 262.0
+margin/right = 603.0
+margin/bottom = 276.0
+text = "Lleva a los animales al corral superior"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Dog" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 363.0
+margin/top = 372.0
+margin/right = 592.0
+margin/bottom = 386.0
+text = "No dejes que el perro te alcance!"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label 3" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 359.0
+margin/top = 456.0
+margin/right = 661.0
+margin/bottom = 470.0
+text = "Pulsa la barra espaciadora para soltar la comida"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 366.0
+margin/top = 152.0
+margin/right = 615.0
+margin/bottom = 166.0
+text = "Pulsa la tecla A para soltar el rayo"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 289.981, 143.832 )
+texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 290.686, 99.2091 )
+texture = ExtResource( 6 )
+
+
